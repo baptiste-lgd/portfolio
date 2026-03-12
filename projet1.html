@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Orya | GitClone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        </div>
+
+        <a href="index.html" class="site-name">Orya</a>
+
+        <nav class="nav-right">
+            <a href="index.html">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="ecole.html">My Digital School</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html" class="btn-nav">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>🚀 Configuration Git sur Debian VM</h2>
+
+        <div class="step">
+            <h3>1️⃣ Se placer dans le répertoire de travail</h3>
+            <p>Ouvrez un terminal et naviguez vers votre répertoire :</p>
+            <pre><code>cd /home/proxmox</code></pre>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ Installer Git</h3>
+            <p>Vérifiez ou installez Git :</p>
+            <pre><code>sudo apt update
+sudo apt install git -y</code></pre>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ Configurer Git</h3>
+            <p>Définissez votre identité pour les commits :</p>
+            <pre><code>git config --global user.name "Votre Nom Prénom"
+git config --global user.email "votre.email@example.com"</code></pre>
+            <p><em>Le <code>--global</code> applique la config à tous vos projets.</em></p>
+        </div>
+
+        <div class="step">
+            <h3>4️⃣ Ajouter votre clé SSH</h3>
+            <p>Authentifiez vos opérations Git :</p>
+            <pre><code>ssh-add ~/.ssh/proxmox</code></pre>
+            <p><em>Assurez-vous que la clé existe et est autorisée sur GitHub.</em></p>
+        </div>
+
+        <div class="step">
+            <h3>5️⃣ Cloner le dépôt GitHub</h3>
+            <p>Clonez le dépôt :</p>
+            <pre><code>git clone git@github.com:apibim-xyz/web-02.git</code></pre>
+            <p>Un dossier <code>web-02</code> sera créé avec tout le projet.</p>
+        </div>
+
+        <div class="step">
+            <h3>6️⃣ Vérification</h3>
+            <p>Vérifiez la configuration :</p>
+            <pre><code>git config --list</code></pre>
+            <p>Vérifiez que le dépôt a bien été cloné :</p>
+            <pre><code>ls web-02</code></pre>
+        </div>
+
+<!-- Bouton téléchargement procédure -->
+<div class="project-download">
+    <a href="procedures/Procdure-Gitclone-legrand-baptiste.pdf" target="_blank" class="btn-download">
+        Télécharger la procédure
+    </a>
+</div>
+
+        <div class="back-to-projects">
+    <a href="projets.html" class="btn-back">← Retour aux projets</a>
+</div>
+    </div>
+</div>
+
+<footer>
+    © 2026 - Orya | Conçu avec passion
+</footer>
+
+</body>
+</html>
