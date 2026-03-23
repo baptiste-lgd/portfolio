@@ -1,26 +1,38 @@
+/* ======================= */
 /* RESET */
+/* ======================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ======================= */
+/* BODY */
+/* ======================= */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #f9fafb;
     color: #1f2937;
     line-height: 1.6;
     padding-top: 80px;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+/* ======================= */
 /* CONTAINER */
+/* ======================= */
 .container {
     width: 85%;
     max-width: 1200px;
     margin: auto;
 }
 
+/* ======================= */
 /* HEADER */
+/* ======================= */
 header {
     background: #0f172a;
     position: fixed;
@@ -28,11 +40,12 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    
-    border-bottom: none; /* 🔥 enlève barre blanche */
+
+    border: none !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-/* SUPPRIME toute ligne parasite */
+/* supprime toute ligne parasite */
 header::after {
     display: none;
 }
@@ -44,15 +57,20 @@ header::after {
     padding: 15px 0;
 }
 
+/* ======================= */
 /* LOGO */
+/* ======================= */
 .logo {
     color: white;
     font-weight: 700;
     font-size: 22px;
     text-decoration: none;
+    letter-spacing: 0.3px;
 }
 
-/* NAV */
+/* ======================= */
+/* NAVIGATION */
+/* ======================= */
 .nav {
     display: flex;
     gap: 25px;
@@ -65,22 +83,23 @@ header::after {
     font-weight: 500;
     position: relative;
     display: inline-block;
+    letter-spacing: 0.3px;
     transition: color 0.2s ease;
 }
 
-/* hover propre (SANS BOUGER) */
+/* hover (stable, sans bouger) */
 .nav a:hover {
     color: white;
     font-weight: 700;
 }
 
-/* underline propre */
+/* underline animation */
 .nav a::after {
     content: "";
     position: absolute;
     width: 0;
     height: 3px;
-    bottom: -2px; /* collé au texte */
+    bottom: -2px;
     left: 0;
     background: #2563eb;
     transition: width 0.3s ease;
@@ -90,7 +109,9 @@ header::after {
     width: 100%;
 }
 
-/* bouton contact */
+/* ======================= */
+/* CONTACT (comme les autres) */
+/* ======================= */
 .btn-nav {
     background: none;
     padding: 0;
@@ -103,7 +124,9 @@ header::after {
     color: white !important;
 }
 
+/* ======================= */
 /* HERO */
+/* ======================= */
 .hero {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
@@ -121,7 +144,9 @@ header::after {
     opacity: 0.8;
 }
 
+/* ======================= */
 /* BOUTONS */
+/* ======================= */
 .btn {
     padding: 12px 25px;
     border-radius: 10px;
@@ -152,7 +177,9 @@ header::after {
     color: #0f172a;
 }
 
+/* ======================= */
 /* ABOUT */
+/* ======================= */
 .about {
     padding: 80px 0;
 }
@@ -161,7 +188,9 @@ header::after {
     margin-bottom: 20px;
 }
 
+/* ======================= */
 /* FOOTER */
+/* ======================= */
 footer {
     background: #0f172a;
     color: #94a3b8;
@@ -169,26 +198,10 @@ footer {
     padding: 20px;
 }
 
-.logo,
-.nav a {
-    letter-spacing: 0.3px; /* arrondi visuel */
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-header {
-    border-bottom: none !important;
-}
-
+/* ======================= */
+/* FIX BARRE BLANCHE (ULTIME) */
+/* ======================= */
 header,
-.header-container {
+header * {
     border: none !important;
-    outline: none;
 }
