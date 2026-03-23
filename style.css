@@ -751,44 +751,47 @@ code {
 }
 
 /* ======================= */
-/* FORMULAIRE MODERNE */
+/* FORMULAIRE PROPRE */
 /* ======================= */
 
 .contact-form {
     margin-top: 30px;
 }
 
-/* lignes */
+/* ligne 2 colonnes */
 .form-row {
     display: flex;
     gap: 20px;
 }
 
+/* alignement captcha */
 .form-row.align {
     align-items: center;
 }
 
-/* groupe */
+/* bloc champ */
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
     flex: 1;
+    margin-bottom: 20px;
 }
 
+/* petit champ (captcha) */
 .form-group.small {
     max-width: 120px;
 }
 
 /* labels */
 .form-group label {
-    margin-bottom: 8px;
     font-weight: 600;
+    margin-bottom: 8px;
 }
 
 /* inputs */
 .contact-form input,
 .contact-form textarea {
+    width: 100%;
     padding: 12px;
     border-radius: 10px;
     border: 1px solid #e5e7eb;
@@ -801,7 +804,7 @@ code {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border: 1px solid #2563eb;
+    border-color: #2563eb;
     background: white;
     box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
 }
@@ -822,8 +825,8 @@ textarea {
 
 /* bouton */
 .btn-submit {
-    margin-top: 20px;
-    padding: 14px 30px;
+    width: 100%;
+    padding: 15px;
     background: #1f2937;
     color: white;
     border: none;
@@ -833,9 +836,8 @@ textarea {
     transition: 0.3s;
 }
 
-/* hover bouton */
+/* hover */
 .btn-submit:hover {
     background: #111827;
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
 }
