@@ -226,3 +226,88 @@ footer {
         width: 90%;
     }
 }
+
+/* ======================= */
+/* PAGE PROJET - AMÉLIORATION */
+/* ======================= */
+
+/* Sections étapes */
+.step {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f3f4f6;
+    border-radius: 12px;
+}
+
+/* Titres étapes */
+.step h3 {
+    margin-bottom: 10px;
+}
+
+/* Code (terminal) */
+pre {
+    background: #111827;
+    color: #e5e7eb;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+code {
+    font-family: monospace;
+}
+
+/* ======================= */
+/* BOUTONS PROJETS */
+/* ======================= */
+
+/* bouton téléchargement */
+.btn-download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* bouton retour */
+.btn-back {
+    display: inline-block;
+    margin-top: 15px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* conteneur boutons */
+.project-download,
+.back-to-projects {
+    margin-top: 20px;
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.project-intro {
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
