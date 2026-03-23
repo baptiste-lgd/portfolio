@@ -641,21 +641,6 @@ code {
     margin-bottom: 30px;
 }
 
-/* étapes */
-.step {
-    background: #f3f4f6;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-}
-
-/* hover étapes */
-.step:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
 /* boutons centrés */
 .project-buttons {
     text-align: center;
