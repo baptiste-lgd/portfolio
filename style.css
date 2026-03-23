@@ -414,3 +414,65 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 .school-logo img:hover {
     transform: scale(1.1);
 }
+
+/* ======================= */
+/* PROJECTS */
+/* ======================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* lien carte */
+.project-card {
+    text-decoration: none;
+}
+
+/* carte */
+.project-card .card {
+    height: 100%; /* 🔥 même taille */
+    padding: 25px;
+    border-radius: 18px;
+    background: #f3f4f6;
+    transition: 0.3s;
+}
+
+/* TITRE */
+.project-card h3 {
+    color: #2563eb;
+    font-weight: 700; /* 🔥 plus gras */
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* TEXTE */
+.project-card p {
+    color: #4b5563;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+/* HOVER GLOBAL */
+.project-card:hover .card {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* HOVER TEXTE BLEU */
+.project-card:hover h3 {
+    color: #1d4ed8; /* bleu plus foncé */
+}
+
+/* HOVER TEXTE */
+.project-card:hover p {
+    color: #2563eb;
+}
+
+.project-card .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
