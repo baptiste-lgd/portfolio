@@ -9,6 +9,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: #f9fafb;
     color: #1f2937;
+    line-height: 1.6;
+    padding-top: 80px;
 }
 
 /* CONTAINER */
@@ -29,8 +31,8 @@ header {
 
 .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 0;
 }
 
@@ -52,75 +54,99 @@ header {
     color: #cbd5f5;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s;
+    position: relative;
 }
 
 .nav a:hover {
     color: white;
 }
 
-/* BOUTON CONTACT */
-.btn-nav {
-    background: #2563eb;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: white !important;
-}
-
-.btn-nav:hover {
-    background: #1d4ed8;
-}
-
-/* ESPACE HEADER */
-body {
-    padding-top: 80px;
-}
-
-.projects {
-    padding: 80px 0;
-}
-
-.projects h2 {
-    margin-bottom: 30px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    transition: 0.3s;
-}
-
-.card:hover h3 {
-    color: #2563eb;
-}
-
-/* effet nav */
+/* effet underline */
 .nav a::after {
     content: "";
-    display: block;
-    height: 2px;
-    background: #2563eb;
+    position: absolute;
     width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #2563eb;
     transition: 0.3s;
 }
 
 .nav a:hover::after {
     width: 100%;
+}
+
+/* bouton contact */
+.btn-nav {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white !important;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* BOUTONS */
+.btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary:hover {
+    background: white;
+    color: #0f172a;
+}
+
+/* ABOUT */
+.about {
+    padding: 80px 0;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
 }
