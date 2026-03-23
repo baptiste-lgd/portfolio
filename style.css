@@ -626,3 +626,42 @@ code {
 .step:nth-child(6) { animation-delay: 0.5s; }
 .step:nth-child(7) { animation-delay: 0.6s; }
 
+/* ======================= */
+/* DETAIL PROJET (HARMONISÉ) */
+/* ======================= */
+
+.project-card-detail {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* titre */
+.project-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* étapes */
+.step {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+/* hover étapes */
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* boutons centrés */
+.project-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.project-buttons a {
+    margin: 10px;
+}
