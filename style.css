@@ -35,6 +35,10 @@ header {
     z-index: 1000;
 }
 
+header {
+    border-bottom: none;
+}
+
 .header-container {
     width: 85%;
     max-width: 1200px;
