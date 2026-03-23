@@ -420,6 +420,13 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 /* PROJECTS */
 /* ======================= */
 
+/* TITRE section projets */
+.projects-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
