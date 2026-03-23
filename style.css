@@ -92,18 +92,15 @@ header::after {
 
 /* bouton contact */
 .btn-nav {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
-    color: white !important;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: #cbd5f5 !important;
+    font-weight: 500;
 }
 
-/* hover bouton (SANS scale pour éviter bug) */
 .btn-nav:hover {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    color: white !important;
 }
 
 /* HERO */
@@ -170,4 +167,28 @@ footer {
     color: #94a3b8;
     text-align: center;
     padding: 20px;
+}
+
+.logo,
+.nav a {
+    letter-spacing: 0.3px; /* arrondi visuel */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    border-bottom: none !important;
+}
+
+header,
+.header-container {
+    border: none !important;
+    outline: none;
 }
