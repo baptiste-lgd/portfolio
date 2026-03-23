@@ -656,10 +656,9 @@ code {
 /* ======================= */
 
 .project-phases {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    margin-top: 30px;
 }
 
 /* bloc */
@@ -699,4 +698,16 @@ code {
     text-align: center;
     margin-bottom: 25px;
     color: #6b7280;
+}
+
+.phase-box {
+    width: 100%;
+}
+
+.phase-box {
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    padding: 25px 30px;
+    border-radius: 16px;
+    transition: 0.3s;
+    border-left: 5px solid #2563eb;
 }
