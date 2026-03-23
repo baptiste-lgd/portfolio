@@ -292,7 +292,7 @@ header * {
 /* ======================= */
 
 .about-card p {
-    background: #f3f4f6;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
     padding: 15px 20px;
     border-radius: 12px;
     margin-bottom: 15px;
