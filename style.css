@@ -317,3 +317,83 @@ header * {
     margin-bottom: 25px;
     font-size: 28px;
 }
+
+/* ======================= */
+/* PAGE ECOLE */
+/* ======================= */
+
+.school-intro {
+    padding: 80px 0;
+}
+
+/* titre centré */
+.title-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* paragraphes plus propres */
+.school-intro p {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    background: #f3f4f6;
+    padding: 15px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+/* hover léger */
+.school-intro p:hover {
+    background: #e5e7eb;
+    transform: translateY(-3px);
+}
+
+/* ======================= */
+/* IMAGE */
+/* ======================= */
+
+.school-image {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.school-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+/* animation hover */
+.school-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ======================= */
+/* BOUTON VIDEO */
+/* ======================= */
+
+.video-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-video {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #1f2937;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* hover stylé */
+.btn-video:hover {
+    background: #111827;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
