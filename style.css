@@ -66,8 +66,8 @@ header {
     content: "";
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: -5px;
+    height: 3px; /* plus épais */
+    bottom: -2px; /* 🔥 remonte la barre */
     left: 0;
     background: #2563eb;
     transition: 0.3s;
@@ -79,10 +79,18 @@ header {
 
 /* bouton contact */
 .btn-nav {
+    display: inline-block;
+    padding: 10px 20px; /* même "poids visuel" */
+    border-radius: 10px;
     background: linear-gradient(135deg, #2563eb, #3b82f6);
-    padding: 8px 16px;
-    border-radius: 8px;
     color: white !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
 }
 
 /* HERO */
@@ -149,4 +157,18 @@ footer {
     color: #94a3b8;
     text-align: center;
     padding: 20px;
+}
+
+.nav a {
+    transition: all 0.2s ease;
+}
+
+.nav a:hover {
+    color: white;
+    font-weight: 700;
+    transform: scale(1.08); /* 🔥 grossit légèrement */
+}
+
+.nav a {
+    display: inline-block;
 }
