@@ -841,3 +841,41 @@ textarea {
     background: #111827;
     transform: translateY(-2px);
 }
+
+.email {
+    font-weight: 600;
+    color: #1f2937; /* même couleur que ton texte */
+}
+
+/* bloc email */
+.email-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f3f4f6;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+/* texte email */
+#email-text {
+    font-weight: 600;
+}
+
+/* bouton copier */
+.btn-copy {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* hover */
+.btn-copy:hover {
+    background: #1d4ed8;
+}

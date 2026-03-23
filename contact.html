@@ -49,7 +49,27 @@
             <!-- INFOS -->
             <h3>📧 Informations</h3>
             <p>
-                Email : <strong><a href="mailto:baptiste.legd@gmail.com">baptiste.legd@gmail.com</a></strong><br>
+                <div class="email-box">
+    <span id="email-text">baptiste.legd@gmail.com</span>
+    <button onclick="copyEmail()" class="btn-copy">
+        📋 Copier
+    </button>
+</div>
+
+<script>
+function copyEmail() {
+    const email = document.getElementById("email-text").innerText;
+    navigator.clipboard.writeText(email);
+
+    const btn = document.querySelector(".btn-copy");
+    btn.innerText = "✅ Copié !";
+
+    setTimeout(() => {
+        btn.innerText = "📋 Copier";
+    }, 2000);
+}
+</script>
+
                 LinkedIn : <strong><a href="https://www.linkedin.com/in/baptiste-legrand-/" target="_blank">linkedin.com/in/baptiste-legrand-</a></strong><br>
                 GitHub : <strong><a href="https://github.com/baptiste-lgd" target="_blank">github.com/baptiste-lgd</a></strong>
             </p>
