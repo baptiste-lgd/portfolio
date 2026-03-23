@@ -397,3 +397,19 @@ header * {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+
+/* LOGO ECOLE */
+.school-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.school-logo img {
+    width: 120px;
+    transition: 0.3s;
+}
+
+/* petit effet propre */
+.school-logo img:hover {
+    transform: scale(1.1);
+}
