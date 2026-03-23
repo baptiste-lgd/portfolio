@@ -751,12 +751,21 @@ code {
 }
 
 /* ======================= */
-/* FORMULAIRE CONTACT */
+/* FORMULAIRE MODERNE */
 /* ======================= */
 
 .contact-form {
-    max-width: 600px;
-    margin: 40px auto;
+    margin-top: 30px;
+}
+
+/* lignes */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row.align {
+    align-items: center;
 }
 
 /* groupe */
@@ -764,56 +773,69 @@ code {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    flex: 1;
 }
 
-/* label */
+.form-group.small {
+    max-width: 120px;
+}
+
+/* labels */
 .form-group label {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
-/* champs */
-.form-group input,
-.form-group textarea {
-    padding: 12px 15px;
+/* inputs */
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
     border-radius: 10px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
     font-family: 'Poppins', sans-serif;
     transition: 0.3s;
 }
 
-/* textarea */
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
+/* focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
 }
 
-/* focus effet */
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+/* textarea */
+textarea {
+    resize: none;
+}
+
+/* checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #4b5563;
 }
 
 /* bouton */
-.form-button {
-    text-align: center;
-}
-
-.form-button button {
-    padding: 12px 25px;
+.btn-submit {
+    margin-top: 20px;
+    padding: 14px 30px;
     background: #1f2937;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
 }
 
-/* hover */
-.form-button button:hover {
+/* hover bouton */
+.btn-submit:hover {
     background: #111827;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }

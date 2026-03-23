@@ -33,61 +33,78 @@
     <div class="container">
         <div class="card">
 
-            <h2 style="text-align:center;">📩 Contact</h2>
+            <!-- TITRE -->
+            <h2 class="title-center">Contact</h2>
 
-            <p style="text-align:center;">
-                Je suis actuellement étudiant en <strong>BTS SIO SISR</strong> et
-                je recherche une <strong>alternance / stage en systèmes et réseaux</strong>.
+            <!-- INTRO -->
+            <p class="project-intro">
+                Je suis actuellement étudiant en <strong>BTS SIO SISR</strong> et je recherche une
+                <strong>alternance / stage en systèmes et réseaux</strong>.
             </p>
 
-            <p style="text-align:center;">
+            <p class="project-intro">
                 Vous pouvez me contacter via le formulaire ci-dessous ou directement par email.
             </p>
 
             <!-- INFOS -->
-            <div class="contact-info" style="text-align:center; margin: 30px 0;">
-                <p><strong>📧 Email :</strong> baptiste.legd@gmail.com</p>
-                <p><strong>🔗 LinkedIn :</strong> 
-                    <a href="https://www.linkedin.com/in/baptiste-legrand-/" target="_blank">
-                        Voir mon profil
-                    </a>
-                </p>
-                <p><strong>💻 GitHub :</strong> 
-                    <a href="https://github.com/baptiste-lgd" target="_blank">
-                        Voir mes projets
-                    </a>
-                </p>
-            </div>
+            <h3>📧 Informations</h3>
+            <p>
+                Email : <strong><a href="mailto:baptiste.legd@gmail.com">baptiste.legd@gmail.com</a></strong><br>
+                LinkedIn : <strong><a href="https://www.linkedin.com/in/baptiste-legrand-/" target="_blank">linkedin.com/in/baptiste-legrand-</a></strong><br>
+                GitHub : <strong><a href="https://github.com/baptiste-lgd" target="_blank">github.com/baptiste-lgd</a></strong>
+            </p>
 
             <hr style="margin:30px 0; opacity:0.2;">
 
-            <h3 style="text-align:center;">✉️ Formulaire de contact</h3>
-
             <!-- FORMULAIRE -->
-            <div class="contact-form">
-                <form action="https://formspree.io/f/mgolnazw" method="POST">
+            <h3>✉️ Formulaire de contact</h3>
+
+            <form action="https://formspree.io/f/mgolnazw" method="POST" class="contact-form">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Prénom</label>
+                        <input type="text" name="prenom" placeholder="Votre prénom" required>
+                    </div>
 
                     <div class="form-group">
                         <label>Nom</label>
-                        <input type="text" name="name" placeholder="Votre nom" required>
+                        <input type="text" name="nom" placeholder="Votre nom" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" name="email" placeholder="votre@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Objet</label>
+                    <input type="text" name="objet" placeholder="Sujet du message">
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+                </div>
+
+                <div class="form-row align">
+                    <div class="form-group small">
+                        <label>7 + 2 ?</label>
+                        <input type="text" name="captcha" required>
                     </div>
 
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" placeholder="Votre email" required>
+                    <div class="checkbox">
+                        <input type="checkbox" required>
+                        <span>J’accepte que mon e-mail soit utilisé pour une réponse</span>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea name="message" placeholder="Votre message..." required></textarea>
-                    </div>
+                <button type="submit" class="btn-submit">
+                    🚀 Envoyer le message
+                </button>
 
-                    <div class="form-button">
-                        <button type="submit">📨 Envoyer le message</button>
-                    </div>
-
-                </form>
-            </div>
+            </form>
 
         </div>
     </div>
