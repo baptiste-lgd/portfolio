@@ -712,10 +712,13 @@ code {
     border-left: 5px solid #2563eb;
 }
 
+.project-card-detail {
+    display: block !important;
+}
+
 .project-phases {
     display: flex !important;
     flex-direction: column !important;
-    gap: 25px !important;
 }
 
 .phase-box {
