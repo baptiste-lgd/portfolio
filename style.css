@@ -57,17 +57,10 @@ header {
 }
 
 /* Nom du site centré */
-.site-name {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all 0.3s ease;
+header {
+  text-align: left;
+  padding-left: 20px; /* ajuste la valeur selon ton besoin */
 }
-
 .site-name:hover {
     color: #2563eb;
     transform: translateX(-50%) scale(1.1);
