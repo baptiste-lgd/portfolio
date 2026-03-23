@@ -495,3 +495,104 @@ body {
 .container {
     flex: 1;
 }
+
+/* ===== PAGE PROJET ===== */
+
+/* Titre */
+.card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* étapes */
+.step {
+    margin-bottom: 30px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+}
+
+/* code */
+pre {
+    background: #111827;
+    color: #e5e7eb;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+code {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* texte secondaire */
+.step em {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ===== BOUTONS ===== */
+
+/* conteneur */
+.project-download,
+.back-to-projects {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* bouton téléchargement (gris foncé) */
+.btn-download {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background: #111827;
+    transform: translateY(-2px);
+}
+
+/* bouton retour (bleu) */
+.btn-back {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.card {
+    padding: 40px;
+}
+
+.project-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.project-buttons a {
+    display: inline-block;
+    margin: 10px;
+}
