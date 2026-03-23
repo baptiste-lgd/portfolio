@@ -7,15 +7,9 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     padding-top: 80px;
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     background-color: #f9fafb;
     color: #1f2937;
@@ -35,10 +29,6 @@ header {
     z-index: 1000;
 }
 
-header {
-    border-bottom: none;
-}
-
 .header-container {
     width: 85%;
     max-width: 1200px;
@@ -48,24 +38,22 @@ header {
     padding: 15px 0;
 }
 
-/* Nom du site */
+/* Nom */
 .site-name {
     color: #ffffff;
     font-weight: 700;
     font-size: 22px;
     text-decoration: none;
-    margin-right: auto; /* 🔥 pousse le menu à droite */
-    transition: 0.3s ease;
+    margin-right: auto;
 }
 
 .site-name:hover {
     color: #2563eb;
 }
 
-/* Navigation */
+/* Nav */
 .nav-right {
     display: flex;
-    align-items: center;
     gap: 25px;
 }
 
@@ -73,7 +61,6 @@ header {
     color: #e5e7eb;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s ease;
 }
 
 .nav-right a:hover {
@@ -110,20 +97,21 @@ header {
 .hero p {
     font-size: 18px;
     margin-bottom: 35px;
-    opacity: 0.9;
 }
 
-/* Boutons */
+/* ======================= */
+/* BOUTONS */
+/* ======================= */
 .btn {
     padding: 12px 28px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s ease;
-    margin: 5px;
     display: inline-block;
+    transition: all 0.3s ease;
 }
 
+/* principal */
 .primary {
     background-color: #2563eb;
     color: white;
@@ -131,16 +119,20 @@ header {
 
 .primary:hover {
     background-color: #1d4ed8;
+    transform: translateY(-2px);
 }
 
+/* secondaire */
 .secondary {
     border: 2px solid white;
     color: white;
+    background: transparent;
 }
 
 .secondary:hover {
     background-color: white;
     color: #111827;
+    transform: translateY(-2px);
 }
 
 /* ======================= */
@@ -149,11 +141,6 @@ header {
 .container {
     width: 85%;
     margin: 60px auto;
-    flex: 1;
-}
-
-h1, h2 {
-    margin-bottom: 20px;
 }
 
 .about {
@@ -171,8 +158,19 @@ h1, h2 {
 }
 
 /* ======================= */
-/* CARTES */
+/* PROJETS */
 /* ======================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card {
     background: white;
     padding: 30px;
@@ -184,15 +182,6 @@ h1, h2 {
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-}
-
-/* ======================= */
-/* GRID */
-/* ======================= */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
 }
 
 /* ======================= */
@@ -216,7 +205,6 @@ footer {
     }
 
     .site-name {
-        margin-right: 0;
         margin-bottom: 10px;
     }
 
