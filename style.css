@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-    padding-top: 80px; /* ajuste selon la hauteur de ton header */
+    padding-top: 80px;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     padding: 12px 0;
 }
 
@@ -56,14 +55,17 @@ header {
     transform: scale(1.05);
 }
 
-/* Nom du site centré */
-header {
-  text-align: left;
-  padding-left: 20px; /* ajuste la valeur selon ton besoin */
+/* Nom du site (corrigé) */
+.site-name {
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
 }
+
 .site-name:hover {
     color: #2563eb;
-    transform: translateX(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 
 /* Navigation droite */
@@ -92,8 +94,7 @@ header {
     }
 
     .site-name {
-        position: static;
-        transform: none;
+        margin-left: 0;
         margin-top: 10px;
     }
 
@@ -127,7 +128,7 @@ header {
     opacity: 0.9;
 }
 
-/* Boutons génériques */
+/* Boutons */
 .btn {
     padding: 12px 28px;
     border-radius: 10px;
@@ -158,7 +159,7 @@ header {
 }
 
 /* ======================= */
-/* CONTENU PRINCIPAL */
+/* CONTENU */
 /* ======================= */
 .container {
     width: 85%;
@@ -170,10 +171,9 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-/* Section About */
+/* About */
 .about {
     padding: 100px 10%;
-    background-color: #f9fafb;
 }
 
 .about h2 {
@@ -187,14 +187,33 @@ h1, h2 {
 }
 
 /* ======================= */
-/* FORMULAIRES & CARTES */
+/* CARTES & FORM */
 /* ======================= */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #4b5563;
+}
+
 .card form {
     background: #f3f4f6;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    color: #111827;
 }
 
 .card form input,
@@ -202,17 +221,8 @@ h1, h2 {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: none;
     border-radius: 8px;
-    background-color: #ffffff;
-    color: #111827;
-    font-size: 1em;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.card form input::placeholder,
-.card form textarea::placeholder {
-    color: #6b7280;
+    border: none;
 }
 
 .card form button {
@@ -222,108 +232,15 @@ h1, h2 {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.card form button:hover {
-    background-color: #1d4ed8;
-}
-
-/* Cartes projets */
-.project-card {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
-}
-
-.card p {
-    color: #4b5563;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-}
-
-.card:hover h3 {
-    color: #2563eb;
 }
 
 /* ======================= */
-/* ETAPES / PROJETS */
+/* GRID PROJETS */
 /* ======================= */
-.step {
-    background-color: #eef2ff;
-    border-left: 5px solid #2563eb;
-    padding: 18px 22px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-}
-
-.step h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-.step pre {
-    background-color: #e0e7ff;
-    padding: 12px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-size: 0.95em;
-}
-
-.step em {
-    display: block;
-    margin-top: 6px;
-    color: #6b7280;
-}
-
-/* ======================= */
-/* BOUTON CV SIMPLIFIÉ */
-/* ======================= */
-.cv-section {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-.btn-download {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    background-color: #1f2937;
-    transition: 0.3s ease;
-}
-
-.btn-download:hover {
-    background-color: #374151;
-    transform: translateY(-2px);
-}
-
-/* Responsive pour petit écran */
-@media (max-width: 768px) {
-    .cv-section {
-        flex-direction: column;
-        gap: 10px;
-    }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 /* ======================= */
@@ -338,19 +255,7 @@ footer {
 }
 
 /* ======================= */
-/* EFFETS PREMIUM */
-/* ======================= */
-a {
-    transition: 0.3s ease;
-}
-
-::selection {
-    background: #2563eb;
-    color: white;
-}
-
-/* ======================= */
-/* RESPONSIVE */
+/* RESPONSIVE GLOBAL */
 /* ======================= */
 @media (max-width: 768px) {
     .hero h1 {
@@ -364,145 +269,4 @@ a {
     .container {
         width: 90%;
     }
-
-    .cv-section {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* ======================= */
-/* COMPETENCES */
-/* ======================= */
-.skills-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 20px;
-}
-
-.skills-list li {
-    margin-bottom: 20px;
-    padding: 15px 20px;
-    background: #f3f4f6;
-    border-radius: 12px;
-    transition: 0.3s ease;
-}
-
-.skills-list li:hover {
-    background: #e5e7eb;
-    transform: translateX(5px);
-}
-
-.skills-list strong {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #2563eb;
-}
-
-/* ======================= */
-/* GRID DES PROJETS */
-/* ======================= */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-/* ======================= */
-/* BOUTON RETOUR AUX PROJETS */
-/* ======================= */
-.back-to-projects {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.btn-back {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    background-color: #2563eb; /* bleu principal */
-    transition: 0.3s ease;
-}
-
-.btn-back:hover {
-    background-color: #1d4ed8; /* bleu plus foncé au hover */
-    transform: translateY(-2px);
-}
-
-/* Responsive pour petit écran */
-@media (max-width: 768px) {
-    .back-to-projects {
-        margin: 20px 0;
-    }
-}
-
-/* ======================= */
-/* BOUTON TELECHARGER PROCEDURE */
-.project-download {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.btn-download {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    background-color: #1f2937;
-    transition: 0.3s ease;
-}
-
-.btn-download:hover {
-    background-color: #374151;
-    transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .project-download {
-        margin: 20px 0;
-    }
-}
-
-/* ======================= */
-/* VIDÉO ÉCOLE */
-.video-button a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.school-image {
-    margin-top: 25px; /* espace entre le texte et l'image */
-}
-
-.school-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto; /* centre l'image */
-    border-radius: 8px;
-}
-
-.school-image img:hover {
-    transform: scale(1.03);
-    transition: transform 0.3s ease;
-    filter: brightness(1.05);
-}
-
-.school-intro {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    margin: 40px auto;
-    max-width: 900px;
 }
