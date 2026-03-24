@@ -1020,3 +1020,40 @@ textarea {
     }
 
 }
+
+/* ======================= */
+/* INFOS CONTACT PROPRES */
+/* ======================= */
+
+.info-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f4f6;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* hover léger */
+.info-box:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+/* texte */
+.info-box span {
+    font-weight: 500;
+}
+
+/* liens (linkedin/github) */
+.info-box a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
