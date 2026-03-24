@@ -886,53 +886,137 @@ textarea {
 }
 
 /* ======================= */
-/* 📱 RESPONSIVE MOBILE */
+/* 📱 VERSION MOBILE CLEAN */
 /* ======================= */
 @media (max-width: 768px) {
 
-    /* container plus large */
+    /* ===== GLOBAL ===== */
     .container {
-        width: 90%;
+        width: 92%;
     }
 
-    /* NAVIGATION */
-    .nav {
+    body {
+        padding-top: 70px;
+    }
+
+    /* ===== HEADER ===== */
+    .header-container {
         flex-direction: column;
         gap: 10px;
-        align-items: center;
     }
 
-    /* HERO */
-    .hero h1 {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    /* ===== TITRES ===== */
+    h1 {
         font-size: 28px;
+        text-align: center;
     }
 
-    /* CARTES */
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    /* ===== TEXTE ===== */
+    p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* ===== CARTES ===== */
     .card {
         padding: 20px;
+        border-radius: 14px;
     }
 
-    /* PROJECTS GRID */
+    /* espace entre éléments */
+    .card > * {
+        margin-bottom: 15px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        padding: 80px 0;
+    }
+
+    /* ===== PROJECTS ===== */
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    /* PHASES (projet 2) */
+    /* ===== PHASES (projet 2) ===== */
     .project-phases {
+        display: flex;
         flex-direction: column;
+        gap: 15px;
     }
 
-    /* FORMULAIRE */
+    .phase-box {
+        padding: 18px;
+        border-radius: 14px;
+        border-left: 4px solid #2563eb;
+    }
+
+    /* ===== STEPS ===== */
+    .step {
+        padding: 18px;
+        margin-bottom: 15px;
+    }
+
+    /* ===== FORMULAIRE ===== */
     .form-row {
         flex-direction: column;
+        gap: 10px;
     }
 
-    /* boutons */
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    /* ===== EMAIL BOX ===== */
+    .email-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    /* ===== BOUTONS ===== */
     .btn,
     .btn-download,
-    .btn-back {
+    .btn-back,
+    .btn-copy {
         width: 100%;
         text-align: center;
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        font-size: 14px;
+        padding: 20px;
     }
 
 }
