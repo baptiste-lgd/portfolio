@@ -879,3 +879,8 @@ textarea {
 .btn-copy:hover {
     background: #1d4ed8;
 }
+
+.email-label {
+    font-weight: 600;
+    margin-right: 5px;
+}
