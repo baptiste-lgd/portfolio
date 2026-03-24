@@ -59,20 +59,6 @@
     </button>
 </div>
 
-<script>
-function copyEmail() {
-    const email = document.getElementById("email-text").innerText;
-    navigator.clipboard.writeText(email);
-
-    const btn = document.querySelector(".btn-copy");
-    btn.innerText = "✅ Copié !";
-
-    setTimeout(() => {
-        btn.innerText = "📋 Copier";
-    }, 2000);
-}
-</script>
-
                 LinkedIn : <strong><a href="https://www.linkedin.com/in/baptiste-legrand-/" target="_blank">linkedin.com/in/baptiste-legrand-</a></strong><br>
                 GitHub : <strong><a href="https://github.com/baptiste-lgd" target="_blank">github.com/baptiste-lgd</a></strong>
             </p>
@@ -137,6 +123,20 @@ function copyEmail() {
 <footer>
     © 2026 - Orya | Conçu avec passion
 </footer>
+
+<script>
+function copyEmail() {
+    const email = document.getElementById("email-text").innerText;
+    navigator.clipboard.writeText(email);
+
+    const btn = document.querySelector(".btn-copy");
+    btn.innerText = "✅ Copié !";
+
+    setTimeout(() => {
+        btn.innerText = "📋 Copier";
+    }, 2000);
+}
+</script>
 
 </body>
 </html>
