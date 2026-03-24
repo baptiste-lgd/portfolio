@@ -884,3 +884,55 @@ textarea {
     font-weight: 600;
     margin-right: 5px;
 }
+
+/* ======================= */
+/* 📱 RESPONSIVE MOBILE */
+/* ======================= */
+@media (max-width: 768px) {
+
+    /* container plus large */
+    .container {
+        width: 90%;
+    }
+
+    /* NAVIGATION */
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* HERO */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    /* CARTES */
+    .card {
+        padding: 20px;
+    }
+
+    /* PROJECTS GRID */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* PHASES (projet 2) */
+    .project-phases {
+        flex-direction: column;
+    }
+
+    /* FORMULAIRE */
+    .form-row {
+        flex-direction: column;
+    }
+
+    /* boutons */
+    .btn,
+    .btn-download,
+    .btn-back {
+        width: 100%;
+        text-align: center;
+    }
+
+}
