@@ -1057,3 +1057,45 @@ textarea {
 .info-box a:hover {
     text-decoration: underline;
 }
+
+/* bloc global infos */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* blocs LinkedIn / GitHub */
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #f3f4f6;
+    padding: 12px 15px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+/* hover */
+.info-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* label */
+.info-label {
+    font-weight: 600;
+}
+
+/* lien */
+.info-box a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
