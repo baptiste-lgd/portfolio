@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+main {
+  margin-top: 70px;
+}
+
 /* HEADER */
 header {
   background: #0f172a;
