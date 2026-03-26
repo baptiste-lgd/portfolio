@@ -15,10 +15,8 @@ body {
     background: #f9fafb;
     color: #1f2937;
     line-height: 1.6;
-    padding-top: 80px;
 
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ======================= */
@@ -36,18 +34,12 @@ body {
 header {
     background: #0f172a;
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 1000;
 
-    border: none !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-/* supprime toute ligne parasite */
-header::after {
-    display: none;
 }
 
 .header-container {
@@ -57,40 +49,30 @@ header::after {
     padding: 15px 0;
 }
 
-/* ======================= */
 /* LOGO */
-/* ======================= */
 .logo {
     color: white;
     font-weight: 700;
     font-size: 22px;
     text-decoration: none;
-    letter-spacing: 0.3px;
 }
 
-/* ======================= */
-/* NAVIGATION */
-/* ======================= */
+/* NAV */
 .nav {
     display: flex;
     gap: 25px;
 }
 
-/* liens */
 .nav a {
     color: #cbd5f5;
     text-decoration: none;
     font-weight: 500;
     position: relative;
-    display: inline-block;
-    letter-spacing: 0.3px;
-    transition: color 0.2s ease;
+    transition: 0.2s;
 }
 
-/* hover (stable, sans bouger) */
 .nav a:hover {
     color: white;
-    font-weight: 700;
 }
 
 /* underline animation */
@@ -98,30 +80,15 @@ header::after {
     content: "";
     position: absolute;
     width: 0;
-    height: 3px;
-    bottom: -2px;
+    height: 2px;
+    bottom: -4px;
     left: 0;
     background: #2563eb;
-    transition: width 0.3s ease;
+    transition: 0.3s;
 }
 
 .nav a:hover::after {
     width: 100%;
-}
-
-/* ======================= */
-/* CONTACT (comme les autres) */
-/* ======================= */
-.btn-nav {
-    background: none;
-    padding: 0;
-    border-radius: 0;
-    color: #cbd5f5 !important;
-    font-weight: 500;
-}
-
-.btn-nav:hover {
-    color: white !important;
 }
 
 /* ======================= */
@@ -131,7 +98,8 @@ header::after {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
     text-align: center;
-    padding: 120px 0;
+
+    padding: 140px 0 100px; /* 🔥 espace pour header */
 }
 
 .hero h1 {
@@ -178,27 +146,22 @@ header::after {
 }
 
 /* ======================= */
-/* ABOUT */
+/* SECTIONS */
 /* ======================= */
-.about {
+section {
     padding: 80px 0;
-}
-
-.about h2 {
-    margin-bottom: 20px;
 }
 
 /* ======================= */
 /* FOOTER */
 /* ======================= */
 footer {
-    width: 100%;
     background: #0f172a;
     color: #94a3b8;
     text-align: center;
     padding: 25px;
-    margin-top: auto;
 }
+
 /* ======================= */
 /* FIX BARRE BLANCHE (ULTIME) */
 /* ======================= */
