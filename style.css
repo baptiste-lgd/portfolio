@@ -57,6 +57,14 @@ header::after {
     padding: 15px 0;
 }
 
+header {
+  height: 70px;
+}
+
+body {
+  padding-top: 70px;
+}
+
 /* ======================= */
 /* LOGO */
 /* ======================= */
