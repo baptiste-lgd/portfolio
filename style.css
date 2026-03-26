@@ -168,12 +168,18 @@ html, body {
 }
 
 body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+/* IMPORTANT */
 main {
-    flex: 1;
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 /* ======================= */
