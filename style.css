@@ -124,35 +124,14 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
+    margin-top: 40px;
 }
 
 .project-card {
     text-decoration: none;
     color: inherit;
-}
-
-.project-card .card {
-    height: 100%;
-    padding: 25px;
-    border-radius: 18px;
-    background: #f3f4f6;
-    transition: all 0.3s ease;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* 🔥 centre horizontal */
-    text-align: center;  /* 🔥 centre le texte */
-}
-
-.project-card p {
-    max-width: 300px;
-}
-
-.project-card .card {
-    text-align: center;
 }
 
 .project-card .card {
