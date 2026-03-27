@@ -555,6 +555,12 @@ section {
     text-align: center;
     margin-bottom: 16px;
 }
+.school-card {
+    background: #f5f5f5; /* ou var(--card) si tu en as un */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
 .school-logo {
     text-align: center;
