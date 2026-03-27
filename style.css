@@ -405,7 +405,20 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 }
 
 .project-card.full {
-    grid-column: 1 / -1 !important;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+
+.project-card.full .card {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.project-card.full .card {
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border-left: 5px solid #2563eb;
 }
 
 /* lien carte */
