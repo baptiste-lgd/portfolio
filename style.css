@@ -928,19 +928,6 @@ textarea {
         padding: 80px 0;
     }
 
-    /* ===== PROJECTS ===== */
-   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
-    gap: 30px;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
-    gap: 30px;
-}
-
     /* ===== PHASES (projet 2) ===== */
     .project-phases {
         display: flex;
