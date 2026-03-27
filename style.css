@@ -152,6 +152,10 @@ section {
 }
 
 .project-card .card {
+    text-align: center;
+}
+
+.project-card .card {
     height: 100%;
     padding: 25px;
     border-radius: 18px;
