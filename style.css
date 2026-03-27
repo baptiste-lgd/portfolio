@@ -124,9 +124,8 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin-top: 40px;
 }
 
 .project-card {
@@ -402,11 +401,6 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
-}
-
-.projects-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
 }
 
 .project-card.full {
