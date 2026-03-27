@@ -406,9 +406,8 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 🔥 2 colonnes fixes */
+    grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
     gap: 30px;
-    margin-top: 40px;
 }
 
 /* lien carte */
@@ -933,13 +932,13 @@ textarea {
    .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
-    gap: 20px;
+    gap: 30px;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
-    gap: 20px;
+    gap: 30px;
 }
 
     /* ===== PHASES (projet 2) ===== */
