@@ -405,15 +405,7 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 }
 
 .project-card.full {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-}
-
-.project-card.full .card {
-    max-width: 700px;
-    width: 100%;
-    text-align: center;
+    grid-column: 1 / -1 !important;
 }
 
 /* lien carte */
