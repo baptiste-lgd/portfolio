@@ -406,7 +406,7 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 🔥 2 colonnes fixes */
     gap: 30px;
     margin-top: 40px;
 }
