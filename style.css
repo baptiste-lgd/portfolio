@@ -1117,3 +1117,43 @@ footer {
     /* Footer */
     footer { font-size: 12px; }
 }
+
+/* ================================
+   TOOLS (projet progression IT)
+================================ */
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.tool {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.tool:hover {
+  background: white;
+  border-color: var(--accent-2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.tool span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.tool p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
