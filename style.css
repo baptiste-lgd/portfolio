@@ -1076,3 +1076,67 @@ textarea {
 .info-box a:hover {
     text-decoration: underline;
 }
+
+/* ======================= */
+/* HERO SECTION */
+/* ======================= */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #cbd5f5;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* ======================= */
+/* BUTTONS */
+/* ======================= */
+.btn {
+    padding: 14px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: white;
+    color: #0f172a;
+}
+
+/* spacing buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
