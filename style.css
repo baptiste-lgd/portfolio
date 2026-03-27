@@ -405,9 +405,12 @@ filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
-    gap: 30px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.project-card.full {
+    grid-column: 1 / -1 !important;
 }
 
 /* lien carte */
