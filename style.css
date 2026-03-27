@@ -930,10 +930,17 @@ textarea {
     }
 
     /* ===== PROJECTS ===== */
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+   .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
+    gap: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔥 IMPORTANT */
+    gap: 20px;
+}
 
     /* ===== PHASES (projet 2) ===== */
     .project-phases {
