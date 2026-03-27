@@ -537,7 +537,7 @@ section {
 .school-intro {
     padding: 40px 0 80px;
     max-width: 860px;
-    margin: 0 auto;
+    margin: 100px auto 0; 
 }
 
 .title-center {
