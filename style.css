@@ -701,6 +701,10 @@ code {
     color: var(--muted);
     font-size: 15px;
     margin-bottom: 32px;
+
+    max-width: 600px;   /* limite la largeur */
+    margin-left: auto;  /* centre le bloc */
+    margin-right: auto; /* centre le bloc */
 }
 
 .project-phases {
