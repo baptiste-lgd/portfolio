@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Mise en place d’un VPN</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">Legrand Baptiste</a>
+
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="ecole.html">My Digital School</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html" class="btn-nav">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="card project-card-detail">
+
+        <h2 class="project-title">🔐 Mise en place d’un VPN</h2>
+        <p class="project-intro">
+            Projet BTS SIO – Sécurisation des accès distants
+        </p>
+
+        <!-- PROBLEMATIQUE -->
+        <p class="project-description">
+            <strong>Problématique :</strong> Comment permettre à un utilisateur d’accéder à un réseau distant 
+            de manière sécurisée tout en garantissant la confidentialité et l’intégrité des données ?
+        </p>
+
+        <!-- INTRO -->
+        <p class="project-description">
+            Ce projet consiste à configurer un VPN sous Windows afin de sécuriser les communications 
+            entre un poste client et un réseau distant. L’objectif est de mettre en place un accès 
+            fiable en utilisant des protocoles de chiffrement avancés.
+        </p>
+
+        <!-- SCHEMA SIMPLE -->
+        <div class="phase-box">
+            <h3>🌐 Schéma de fonctionnement</h3>
+            <p style="text-align:center;">
+                💻 Client<br>
+                ⬇️ Connexion sécurisée (VPN)<br>
+                🌍 Internet<br>
+                ⬇️ Tunnel chiffré 🔐<br>
+                🖥️ Serveur / Réseau distant
+            </p>
+        </div>
+
+        <!-- PHASES -->
+        <div class="project-phases">
+
+            <div class="phase-box">
+                <h3>🛠️ Configuration VPN</h3>
+                <p>
+                    Mise en place de la connexion VPN via Windows avec les paramètres 
+                    du serveur (adresse, type de VPN, authentification).
+                </p>
+            </div>
+
+            <div class="phase-box">
+                <h3>🔐 Renforcement de la sécurité</h3>
+                <p>
+                    Modification du registre pour activer des protocoles sécurisés 
+                    (AES256, DH2048) et améliorer la protection des échanges.
+                </p>
+            </div>
+
+            <div class="phase-box">
+                <h3>⚙️ Paramétrage PowerShell</h3>
+                <p>
+                    Configuration avancée du VPN avec IPsec afin de garantir 
+                    un chiffrement fort et une authentification sécurisée.
+                </p>
+            </div>
+
+            <div class="phase-box">
+                <h3>🌐 Gestion du trafic</h3>
+                <p>
+                    Ajout de routes réseau et désactivation du split tunneling 
+                    pour forcer le passage de tout le trafic dans le tunnel sécurisé.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- CONCLUSION PRO -->
+        <p class="project-description">
+            Ce projet m’a permis de comprendre les enjeux de la sécurisation des accès distants 
+            et de maîtriser la mise en place d’un VPN avec des configurations avancées. 
+            Il met en évidence l’importance du chiffrement et du contrôle du trafic réseau.
+        </p>
+
+        <!-- BOUTONS -->
+        <div class="project-buttons">
+            <a href="procedures/procedure-vpn.pdf" target="_blank" class="btn-download">
+                📄 Télécharger la procédure
+            </a>
+
+            <a href="projets.html" class="btn-back">
+                ← Retour aux projets
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+     © 2026 — Legrand Baptiste
+</footer>
+
+</body>
+</html>
