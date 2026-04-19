@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Installation Git & GitHub</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">Legrand Baptiste</a>
+
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="ecole.html">My Digital School</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html" class="btn-nav">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="card project-card-detail">
+
+        <h2 class="project-title">🐙 Git & GitHub sur machine virtuelle Debian</h2>
+
+        <p class="project-intro">
+            Projet BTS SIO – Gestion de version et accès SSH
+        </p>
+
+        <p class="project-description">
+            Ce projet consiste à mettre en place et utiliser Git sur une machine virtuelle Debian afin de gérer un dépôt GitHub en SSH.  
+            Il permet de comprendre le fonctionnement du contrôle de version et de l’authentification sécurisée via clé SSH.
+        </p>
+
+        <div class="project-phases">
+
+            <div class="phase-box">
+                <h3>📁 Préparation de l’environnement</h3>
+                <ul>
+                    <li>Accès à la machine virtuelle Debian</li>
+                    <li>Choix du répertoire de travail</li>
+                    <li>Organisation des dossiers de projet</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h3>⚙️ Installation et configuration de Git</h3>
+                <ul>
+                    <li>Installation de Git via apt</li>
+                    <li>Vérification de l’installation</li>
+                    <li>Configuration du nom d’utilisateur</li>
+                    <li>Configuration de l’adresse email</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h3>🔐 Authentification SSH</h3>
+                <ul>
+                    <li>Ajout de la clé SSH dans l’agent</li>
+                    <li>Vérification de la clé ~/.ssh/proxmox</li>
+                    <li>Connexion sécurisée à GitHub</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h3>📦 Clonage et utilisation du dépôt</h3>
+                <ul>
+                    <li>Clonage du dépôt GitHub en SSH</li>
+                    <li>Création automatique du dossier projet</li>
+                    <li>Vérification des fichiers clonés</li>
+                    <li>Validation de la configuration Git</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="project-description">
+            Ce projet m’a permis de comprendre l’utilisation de Git en environnement Linux ainsi que la gestion sécurisée de dépôts GitHub via SSH.
+        </p>
+
+        <div class="project-buttons">
+
+            <a href="procedures/git-github-debian-vm.pdf" target="_blank" class="btn-download">
+                📄 Télécharger la procédure
+            </a>
+
+            <a href="projets.html" class="btn-back">
+                ← Retour aux projets
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+     © 2026 — Legrand Baptiste
+</footer>
+
+</body>
+</html>
