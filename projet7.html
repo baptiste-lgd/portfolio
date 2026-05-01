@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Active Directory</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">Legrand Baptiste</a>
+
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="ecole.html">My Digital School</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html" class="btn-nav">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="card project-card-detail">
+
+        <h2 class="project-title">🖧 Déploiement d’une infrastructure Active Directory sous Windows Server 2022</h2>
+
+        <p class="project-intro">
+            Projet BTS SIO – Administration système et réseaux
+        </p>
+
+        <p class="project-description">
+            Ce projet consiste à déployer un contrôleur de domaine sous Windows Server 2022 en mode Server Core, entièrement administré en ligne de commande avec PowerShell, au sein d’un environnement virtualisé.
+Il permet de comprendre la mise en place d’une infrastructure Active Directory, la gestion réseau ainsi que l’administration centralisée des utilisateurs et des postes clients.
+        </p>
+
+       <div class="project-phases">
+
+    <div class="phase-box">
+        <h3>📦 Mise en place de la VM</h3>
+        <ul>
+            <li>Création de la machine virtuelle sous Proxmox VE</li>
+            <li>Allocation des ressources (RAM, CPU, stockage)</li>
+            <li>Montage de l’image ISO Windows Server 2022</li>
+            <li>Préparation de l’environnement d’installation</li>
+        </ul>
+    </div>
+
+    <div class="phase-box">
+        <h3>⚙️ Installation du système</h3>
+        <ul>
+            <li>Installation de Windows Server 2022 en mode Server Core</li>
+            <li>Configuration initiale via SConfig</li>
+            <li>Définition du nom du serveur</li>
+            <li>Paramétrage du système exclusivement en ligne de commande</li>
+        </ul>
+    </div>
+
+    <div class="phase-box">
+        <h3>🌐 Configuration réseau</h3>
+        <ul>
+            <li>Attribution d’une adresse IP statique via PowerShell</li>
+            <li>Configuration de la passerelle et du DNS</li>
+            <li>Vérification de la connectivité réseau</li>
+            <li>Mise en place de l’accès distant (SSH)</li>
+        </ul>
+    </div>
+
+    <div class="phase-box">
+        <h3>🏢 Déploiement Active Directory</h3>
+        <ul>
+            <li>Installation du rôle AD DS en PowerShell</li>
+            <li>Création du domaine "legrand.lan"</li>
+            <li>Promotion du serveur en contrôleur de domaine</li>
+            <li>Configuration automatique du service DNS</li>
+        </ul>
+    </div>
+
+    <div class="phase-box">
+        <h3>🧱 Organisation et gestion</h3>
+        <ul>
+            <li>Création des unités d’organisation (OU) en PowerShell</li>
+            <li>Structuration des utilisateurs et des ordinateurs</li>
+            <li>Intégration d’un poste client au domaine</li>
+            <li>Gestion et déplacement des objets Active Directory</li>
+        </ul>
+    </div>
+
+    <div class="phase-box">
+        <h3>🔐 Administration et sécurisation</h3>
+        <ul>
+            <li>Installation et configuration du service SSH</li>
+            <li>Authentification par clé sécurisée</li>
+            <li>Gestion des permissions système</li>
+            <li>Supervision des services critiques via PowerShell</li>
+        </ul>
+    </div>
+
+</div>
+
+<p class="project-description">
+    Ce projet a été entièrement réalisé en ligne de commande avec PowerShell, sans interface graphique.
+    Il m’a permis de développer une approche plus avancée de l’administration Windows Server, notamment
+    dans le déploiement automatisé d’un contrôleur de domaine et la gestion d’une infrastructure Active Directory.
+</p>
+
+        <div class="project-buttons">
+
+            <a href="procedures/active-directory-powershell.pdf" target="_blank" class="btn-download">
+                📄 Télécharger la procédure
+            </a>
+
+            <a href="projets.html" class="btn-back">
+                ← Retour aux projets
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+     © 2026 — Legrand Baptiste
+</footer>
+
+</body>
+</html>
