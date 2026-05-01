@@ -1179,3 +1179,37 @@ footer {
     background-color: #333;
     transform: translateY(-2px);
 }
+
+/* ================================
+   PROJECT CATEGORIES
+================================ */
+
+.category-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin: 50px 0 10px;
+    color: var(--text);
+    position: relative;
+}
+
+/* petite ligne discrète */
+.category-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--accent-2);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* espace entre les blocs */
+.projects-grid {
+    margin-bottom: 30px;
+}
+
+.category-title {
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
