@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baptiste — Photographe sportif</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@400;500&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#1a1a1a;--bg2:#1a1a1a;--text:#fff;--muted:#b4b4c8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100vh;color:var(--text);font:400 18px/1.5 Jost,"Century Gothic",Helvetica,sans-serif;background:var(--bg)}
+a{color:inherit;text-decoration:none}
+header{position:relative;display:flex;align-items:center;justify-content:space-between;padding:42px 76px 28px}
+nav a{margin-right:24px;color:var(--muted);text-transform:uppercase}
+nav a.on,nav a:hover{color:var(--text)}
+.logo{position:absolute;left:50%;transform:translateX(-50%);font:400 3rem/1 "Bebas Neue",Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase}
+main{padding:0 76px 80px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.tile{position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;background:var(--t,#262626)}
+.tile:only-child{grid-column:1/-1}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile:last-child:nth-child(odd){grid-column:1/-1}
+.tile .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 70px;background:rgba(0,0,0,.78);opacity:0;transition:opacity .35s}
+.tile:hover .ov{opacity:1}
+.ov b{font-weight:500;font-size:1.5rem;text-transform:uppercase}
+.ov span{color:var(--muted);font-size:.95rem}
+.contact{display:none;padding:12vh 0;max-width:640px}
+.contact h2{font:400 clamp(2.5rem,6vw,4.5rem)/1 "Bebas Neue",Impact,sans-serif;margin:0 0 16px;text-transform:uppercase}
+.contact p{color:var(--muted)}
+.contact a{display:block;font-size:1.6rem;margin-top:8px;border-bottom:1px solid #4a4a8a;width:fit-content}
+body.c .grid{display:none}body.c .contact{display:block}
+#top{position:fixed;right:40px;bottom:calc(40px + env(safe-area-inset-bottom,0px));width:60px;height:60px;border-radius:50%;border:0;background:rgba(120,120,170,.45);color:#fff;font-size:1.6rem;cursor:pointer}
+#v{position:fixed;inset:0;z-index:10;display:none;background:var(--bg);overflow-y:auto;padding:70px 76px}
+#v.open{display:block}
+#v h3{margin:0 0 4px;font-weight:500;font-size:1.6rem;text-transform:uppercase}
+#v p{margin:0 0 24px;color:var(--muted)}
+#v .x{position:fixed;top:calc(24px + env(safe-area-inset-top,0px));right:40px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer}
+#v .imgs{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-width:1100px;margin:0 auto}#v img{display:block;width:100%}#v .ph{max-width:1100px;margin:0 auto 6px}
+#v .ph{aspect-ratio:3/2;background:#262626;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+@media(max-width:800px){header{padding:28px 20px 20px;flex-wrap:wrap}.logo{position:static;transform:none;order:-1;width:100%;text-align:center;margin-bottom:16px;font-size:2.4rem}main{padding:0 20px 60px}.grid{grid-template-columns:1fr}.tile .ov{opacity:1;background:linear-gradient(transparent 50%,rgba(0,0,0,.75));justify-content:flex-end;padding:18px}#v{padding:70px 20px}#v .imgs{grid-template-columns:1fr}#top{right:16px;width:48px;height:48px}}
+</style>
+</head>
+<body>
+<header>
+<nav><a href="#" id="nw" class="on">Work</a><a href="#contact" id="nc">Contact</a></nav>
+<a class="logo" href="#">Baptiste</a>
+</header>
+<main>
+<div class="grid" id="grid"></div>
+<div class="contact" id="contact">
+<h2>Contact</h2>
+<p>Un match, un événement, une collaboration ? Écris-moi.</p>
+<a href="mailto:baptiste.legd@gmail.com">baptiste.legd@gmail.com</a>
+<a href="https://instagram.com/bptss.shots" target="_blank" rel="noopener">@bptss.shots</a>
+</div>
+</main>
+<button id="top" aria-label="Haut de page">↑</button>
+<div id="v"></div>
+<script>
+const grid=document.getElementById("grid"),v=document.getElementById("v");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const enc=p=>p.split("/").map(encodeURIComponent).join("/");
+fetch("projects.json").then(r=>r.json()).then(list=>{
+  if(!list.length){grid.innerHTML='<p style="color:var(--muted)">Aucun projet pour le moment.</p>';return}
+  list.forEach(p=>{
+    const t=document.createElement("div");t.className="tile";
+    t.innerHTML=`<img src="${enc(p.images[0])}" alt="${esc(p.title)}" style="object-position:50% 40%"><div class="ov"><b>${esc(p.title)}</b><span>${esc(p.year)}</span></div>`;
+    t.onclick=()=>{
+      v.innerHTML=`<button class="x" aria-label="Fermer">×</button><h3>${esc(p.title)}</h3><p>${esc(p.year)}</p>`+p.images.map(s=>`<img src="${enc(s)}" alt="${esc(p.title)}" loading="lazy">`).join("");
+      v.classList.add("open");v.scrollTop=0;
+      v.querySelector(".x").onclick=()=>v.classList.remove("open");
+    };
+    grid.appendChild(t);
+  });
+}).catch(()=>{grid.innerHTML='<p style="color:var(--muted)">Impossible de charger les projets.</p>'});
+function route(){
+  const c=location.hash==="#contact";
+  document.body.classList.toggle("c",c);
+  document.getElementById("nc").classList.toggle("on",c);
+  document.getElementById("nw").classList.toggle("on",!c);
+}
+addEventListener("hashchange",route);route();
+document.addEventListener("keydown",e=>{if(e.key==="Escape")v.classList.remove("open")});
+document.getElementById("top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+</script>
+</body>
+</html>
