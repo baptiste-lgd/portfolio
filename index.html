@@ -18,7 +18,6 @@ nav a.on,nav a:hover{color:var(--text)}
 main{padding:0 76px 80px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
 .tile{position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;background:var(--t,#262626)}
-.tile:only-child{grid-column:1/-1}
 .tile img{width:100%;height:100%;object-fit:cover;display:block}
 .tile:last-child:nth-child(odd){grid-column:1/-1}
 .tile .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 70px;background:rgba(0,0,0,.78);opacity:0;transition:opacity .35s}
@@ -38,7 +37,19 @@ body.c .grid{display:none}body.c .contact{display:block}
 #v .x{position:fixed;top:calc(24px + env(safe-area-inset-top,0px));right:40px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer}
 #v .imgs{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-width:1100px;margin:0 auto}#v img{display:block;width:100%}#v .ph{max-width:1100px;margin:0 auto 6px}
 #v .ph{aspect-ratio:3/2;background:#262626;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-@media(max-width:800px){header{padding:28px 20px 20px;flex-wrap:wrap}.logo{position:static;transform:none;order:-1;width:100%;text-align:center;margin-bottom:16px;font-size:2.4rem}main{padding:0 20px 60px}.grid{grid-template-columns:1fr}.tile .ov{opacity:1;background:linear-gradient(transparent 50%,rgba(0,0,0,.75));justify-content:flex-end;padding:18px}#v{padding:70px 20px}#v .imgs{grid-template-columns:1fr}#top{right:16px;width:48px;height:48px}}
+a.tile{display:block}
+.proj{display:none;--h:340px;padding-top:24px}
+body.p .proj{display:block}body.p .grid,body.p .contact{display:none}
+.proj h1{margin:0 0 64px;text-align:center;font:400 2.1rem/1.2 Jost,"Century Gothic",Helvetica,sans-serif}
+.jg{display:flex;flex-wrap:wrap;gap:3px}
+.jg::after{content:"";flex-grow:9999}
+.jg figure{margin:0;height:var(--h);flex:67 1 calc(var(--h)*.67);cursor:zoom-in;overflow:hidden}
+.jg img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.jg figure:hover img{opacity:.85}
+#v.lb{padding:20px;cursor:zoom-out}
+#v.lb.open{display:flex;align-items:center;justify-content:center}
+#v.lb img{max-height:94vh;margin:0}
+@media(max-width:800px){.proj{--h:200px}header{padding:28px 20px 20px;flex-wrap:wrap}.logo{position:static;transform:none;order:-1;width:100%;text-align:center;margin-bottom:16px;font-size:2.4rem}main{padding:0 20px 60px}.grid{grid-template-columns:1fr}.tile .ov{opacity:1;background:linear-gradient(transparent 50%,rgba(0,0,0,.75));justify-content:flex-end;padding:18px}#v{padding:70px 20px}#v .imgs{grid-template-columns:1fr}#top{right:16px;width:48px;height:48px}}
 </style>
 </head>
 <body>
@@ -48,6 +59,7 @@ body.c .grid{display:none}body.c .contact{display:block}
 </header>
 <main>
 <div class="grid" id="grid"></div>
+<div class="proj" id="proj"></div>
 <div class="contact" id="contact">
 <h2>Contact</h2>
 <p>Un match, un événement, une collaboration ? Écris-moi.</p>
@@ -58,29 +70,46 @@ body.c .grid{display:none}body.c .contact{display:block}
 <button id="top" aria-label="Haut de page">↑</button>
 <div id="v"></div>
 <script>
-const grid=document.getElementById("grid"),v=document.getElementById("v");
+const grid=document.getElementById("grid"),proj=document.getElementById("proj"),v=document.getElementById("v");
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const enc=p=>p.split("/").map(encodeURIComponent).join("/");
-fetch("projects.json").then(r=>r.json()).then(list=>{
-  if(!list.length){grid.innerHTML='<p style="color:var(--muted)">Aucun projet pour le moment.</p>';return}
+const slug=p=>(p.year+" "+p.title).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+let list=[];
+function showProject(p){
+  proj.innerHTML="<h1>"+esc(p.title)+"</h1>";
+  const jg=document.createElement("div");jg.className="jg";
+  p.images.forEach(s=>{
+    const f=document.createElement("figure"),im=new Image();
+    im.alt=p.title;im.loading="lazy";im.src=enc(s);
+    im.onload=()=>{const r=im.naturalWidth/im.naturalHeight;f.style.flex=(r*100)+" 1 calc(var(--h)*"+r+")"};
+    f.onclick=()=>{v.className="lb open";v.innerHTML='<img alt="'+esc(p.title)+'" src="'+enc(s)+'">'};
+    f.appendChild(im);jg.appendChild(f);
+  });
+  proj.appendChild(jg);
+}
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1));
+  const p=list.find(x=>slug(x)===h);
+  document.body.classList.toggle("c",h==="contact");
+  document.body.classList.toggle("p",!!p);
+  document.getElementById("nc").classList.toggle("on",h==="contact");
+  document.getElementById("nw").classList.toggle("on",h!=="contact");
+  if(p)showProject(p);
+  v.classList.remove("open");
+  scrollTo(0,0);
+}
+fetch("projects.json").then(r=>r.json()).then(l=>{
+  list=l;
+  if(!list.length){grid.innerHTML='<p style="color:var(--muted)">Aucun projet pour le moment.</p>'}
   list.forEach(p=>{
-    const t=document.createElement("div");t.className="tile";
-    t.innerHTML=`<img src="${enc(p.images[0])}" alt="${esc(p.title)}" style="object-position:50% 40%"><div class="ov"><b>${esc(p.title)}</b><span>${esc(p.year)}</span></div>`;
-    t.onclick=()=>{
-      v.innerHTML=`<button class="x" aria-label="Fermer">×</button><h3>${esc(p.title)}</h3><p>${esc(p.year)}</p>`+p.images.map(s=>`<img src="${enc(s)}" alt="${esc(p.title)}" loading="lazy">`).join("");
-      v.classList.add("open");v.scrollTop=0;
-      v.querySelector(".x").onclick=()=>v.classList.remove("open");
-    };
+    const t=document.createElement("a");t.className="tile";t.href="#"+slug(p);
+    t.innerHTML='<img src="'+enc(p.images[0])+'" alt="'+esc(p.title)+'" style="object-position:50% 40%"><div class="ov"><b>'+esc(p.title)+'</b><span>'+esc(p.year)+'</span></div>';
     grid.appendChild(t);
   });
+  route();
 }).catch(()=>{grid.innerHTML='<p style="color:var(--muted)">Impossible de charger les projets.</p>'});
-function route(){
-  const c=location.hash==="#contact";
-  document.body.classList.toggle("c",c);
-  document.getElementById("nc").classList.toggle("on",c);
-  document.getElementById("nw").classList.toggle("on",!c);
-}
-addEventListener("hashchange",route);route();
+addEventListener("hashchange",route);
+v.onclick=()=>v.classList.remove("open");
 document.addEventListener("keydown",e=>{if(e.key==="Escape")v.classList.remove("open")});
 document.getElementById("top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
 </script>
